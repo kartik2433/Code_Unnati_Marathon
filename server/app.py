@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import pickle
 import pandas as pd
 import numpy as np
-from Request import RequestModel
+from request import RequestModel
 
 app = FastAPI()
 pickle_in = open("./model/classifier.pkl", "rb")
@@ -28,7 +28,7 @@ def hello(name: str):
 
 @app.post('/predict')
 def predict(req : RequestModel):
-    print(req.dict())
+    # print(req.dict())
     values = np.array([
         req.age,
         req.gender,
@@ -46,7 +46,7 @@ def predict(req : RequestModel):
     ])
     prediction = classifier.predict([values])
     print(prediction)
-    return {"Prediction": prediction}
+    return {"Prediction": int(prediction[0])}
 
 if __name__ == "__main__":
     import uvicorn
