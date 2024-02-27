@@ -1,12 +1,12 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from request import req
 import pickle
 import pandas as pd
 import numpy as np
+from Request import RequestModel
 
 app = FastAPI()
-pickle_in = open("classifier.pkl", "rb")
+pickle_in = open("./model/classifier.pkl", "rb")
 classifier = pickle.load(pickle_in)
 
 app.add_middleware(
@@ -27,18 +27,27 @@ def hello(name: str):
     return {"Hello": f"{name}"}
 
 @app.post('/predict')
-def predict(req: req):
-    print(req)
-    height = req.height
-    weight = req.weight
-    gender = req.gender
-    print(height, weight, gender)
-    values = np.array([height, weight, gender])
-    print(values)
+def predict(req : RequestModel):
+    print(req.dict())
+    values = np.array([
+        req.age,
+        req.gender,
+        req.chest_pain,
+        req.resting_blood_pressure,
+        req.cholesterol,
+        req.sugar,
+        req.electrocardiographic_result,
+        req.max_heart_rate,
+        req.exercise_induced_angina,
+        req.ST_depression,
+        req.slope,
+        req.major_vessels,
+        req.thalassemia
+    ])
     prediction = classifier.predict([values])
     print(prediction)
-    return {"BMI Prediction": prediction}
+    return {"Prediction": prediction}
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="127.0.0.1", port=8000)
