@@ -1,42 +1,53 @@
-async function predict(e) {
-  
-  e.preventDefault();
+const nameInput = document.getElementById("name");
+const ageInput = document.getElementById("age");
+const selectedGenderInput = document.getElementById("gender")
+const chestInput = document.getElementById("chest");
+const restingInput = document.getElementById("resting");
+const cholersterolInput = document.getElementById("serum");
+const bloodsugarInput = document.getElementById("blood sugar");
+const electrocardiographicInput = document.getElementById("electrocardiographic");
+const heartrateInput = document.getElementById("heart rate");
+const anginaInput = document.getElementById("angina");
+const STInput = document.getElementById("ST");
+const STsegmentInput = document.getElementById("ST segment");
+const STflouroscopyInput = document.getElementById("ST flouroscopy");
+const thalInput = document.getElementById("thal");
 
-  const nameValue = document.getElementById("name").value;
-  const ageValue = document.getElementById("age").value;
-  const selectedGender = document.getElementById("gender").value.toLowerCase();
-  const localityValue = document.getElementById("locality").value;
-  const heightValue = document.getElementById("height").value;
-  const weightValue = document.getElementById("weight").value;
-  
-  if (selectedGender === "" || heightValue === "" || weightValue === "") {
-    alert("All Fileds are required");
-  }
-  
-  const gender = (selectedGender == "male" ? 1 : 0)
-  
-  const data = {
-    "gender" : parseInt(gender),
-    "height" : parseFloat(heightValue),
-    "weight" : parseFloat(weightValue),
-  };
+nameInput.addEventListener('input', showInput)
+ageInput.addEventListener('input', showInput)
+selectedGenderInput.addEventListener('input', showInput)
+chestInput.addEventListener('input', showInput)
+restingInput.addEventListener('input', showInput)
+cholersterolInput.addEventListener('input', showInput)
+bloodsugarInput.addEventListener('input', showInput)
+electrocardiographicInput.addEventListener('input', showInput)
+heartrateInput.addEventListener('input', showInput)
+anginaInput.addEventListener('input', showInput)
+STInput.addEventListener('input', showInput)
+STsegmentInput.addEventListener('input', showInput)
+STflouroscopyInput.addEventListener('input', showInput)
+thalInput.addEventListener('input', showInput)
 
-  console.log(data);
+function showInput() {
 
-  try {
-    const res = await fetch("http://localhost:8000/predict",{
-      method: "POST",
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-      },
-      body: data,
-    });
-    const prediction = await res.json();
-    console.log(prediction);
-  } catch (error) {
-    console.log(error);
-  }
-  
-  const final = document.getElementById("display").innerHTML = `Name : ${nameValue} <br> Age : ${ageValue} <br> Gender : ${selectedGender} <br> Locality : ${localityValue} <br> Height : ${heightValue} <br> Weight : ${weightValue} <br> `;
+
+  const nameValue = nameInput.value;
+  const ageValue = ageInput.value;
+  const selectedGender = selectedGenderInput.value
+  const chestValue = chestInput.value;
+  const restingValue = restingInput.value;
+  const cholersterolValue = cholersterolInput.value;
+  const bloodsugarValue = bloodsugarInput.value;
+  const electrocardiographicValue = electrocardiographicInput.value;
+  const heartrateValue = heartrateInput.value;
+  const anginaValue = anginaInput.value;
+  const STValue = STInput.value;
+  const STsegmentValue = STsegmentInput.value;
+  const STflouroscopyValue = STflouroscopyInput.value;
+  const thal = thalInput.value;
+
+
+
+  document.getElementById("display").innerHTML = `Name : ${nameValue} <br> Age : ${ageValue} <br> Gender : ${selectedGender} <br> Chest Value : ${chestValue} <br> Resting Blood Pressure : ${restingValue} <br> Serum Cholestrol Value : ${cholersterolValue} <br> Fasting blood sugar : ${bloodsugarValue} <br> Resting Electrocardiographic : ${electrocardiographicValue} <br> Maximum Heart Rate : ${heartrateValue} <br> Angina Exercise : ${anginaValue} <br> ST depression : ${STValue} <br> ST Segment : ${STsegmentValue} <br>  Flouroscopy Value : ${STflouroscopyValue} <br> Thal Value : ${thal} <br>`;
 }
+

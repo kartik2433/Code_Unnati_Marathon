@@ -8,41 +8,42 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <section class="w-[100%] h-[100vh] bg-[url('./img/3.jpg')] bg-center bg-cover">
-        <div class="w-[100%] h-[100vh] bg-[rgba(0,0,0,0.8)]">
+<body class="">
+    <section class="w-[auto] h-[149vh] bg-[url('/img/3.jpg')] bg-center bg-cover">
+        <div class="w-[auto] h-[149vh] bg-[rgba(0,0,0,0.8)]">
 
-            <nav class="container mx-auto flex justify-between items-center p-4 text-[20px]">
+
+            <nav class=" mx-auto my-auto flex justify-between items-center p-10 pl-250 text-[20px]">
                 <div>
-                    <a href="#" class="text-white font-bold text-[30px]">Health Risk Assessment Model</a>
+                    <a href="#" class="text-white font-bold text-[40px]">Health Risk Assessment Model</a>
                 </div>
-                <div class="flex space-x-8 font-bold text-[22px]">
+                <div class="flex space-x-8 font-bold text-[35px]">
                     <a href="#" class="text-white">HeartBeat</a>
                     <a href="#" class="text-white">Diabetes</a>
                     <a href="#" class="text-white">Blood Pressure</a>
                 </div>
             </nav>
 
-            <form class="max-w-sm mx-auto mt-20">
-                <div class="mb-5">
-                    <label for="name" class="block mb-2 text-[21px] font-medium text-gray-900 dark:text-white">Enter
+            <form class="max-w-5xl mx-auto mt-5 ">
+                <div class="mb-7">
+                    <label for="name" class="block mb-2 text-[30px] font-medium text-gray-900 dark:text-white">Enter
                         your Name</label>
                     <input type="text" id="name"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="Name" required />
                 </div>
-                <div class="mb-5">
-                    <label for="age" class="block mb-2 text-[21px] font-medium text-gray-900 dark:text-white">Enter your
+                <div class="mb-7">
+                    <label for="age" class="block mb-2 text-[30px] font-medium text-gray-900 dark:text-white">Enter your
                         Age</label>
                     <input type="number" id="age"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="Age" required />
                 </div>
-                <div class="mb-5">
-                    <label for="gender" class="block mb-2 text-[21px] font-medium text-gray-900 dark:text-white">Select
+                <div class="mb-7">
+                    <label for="gender" class="block mb-2 text-[30px] font-medium text-gray-900 dark:text-white">Select
                         your Gender</label>
                     <select id="gender" name="gender"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         required>
                         <option value="" disabled selected>Select an option</option>
                         <option value="Male">Male</option>
@@ -50,44 +51,147 @@
                         <option value="Other">Other</option>
                     </select>
                 </div>
-                <div class="mb-5">
-                    <label for="locality" class="block mb-2 text-[21px] font-medium text-gray-900 dark:text-white">Enter
-                        your Locality</label>
-                    <input type="text" id="locality"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Locality" required />
+                <div class="mb-7">
+                    <label for="chest" class="block mb-2 text-[30px] font-medium text-gray-900 dark:text-white">Select
+                        your Chest pain type (0-3) :</label>
+                    <select id="chest" name="chest"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
                 </div>
-                <div class="mb-5">
-                    <label for="height" class="block mb-2 text-[21px] font-medium text-gray-900 dark:text-white">Enter
-                        your Height (in feet)</label>
-                    <input type="number" id="height"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Height" required />
+
+                <div class="mb-7">
+                    <label for="resting" class="block mb-2 text-[30px] font-medium text-gray-900 dark:text-white">Enter
+                        your resting blood pressure (mm Hg) :</label>
+                    <input type="number" id="resting"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Resting Blood Pressure" required />
                 </div>
-                <div class="mb-5">
-                    <label for="weight" class="block mb-2 text-[21px] font-medium text-gray-900 dark:text-white">Enter
-                        your Weight (in kg)</label>
-                    <input type="number" id="weight"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Weight" required />
+                <div class="mb-7">
+                    <label for="cholesterol"
+                        class="block mb-2 text-[30px] font-medium text-gray-900 dark:text-white">Enter
+                        your serum cholesterol (mg/dl) :</label>
+                    <input type="number" id="serum"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Serum Cholesterol" required />
+                </div>
+                <div class="mb-7">
+                    <label for="blood sugar"
+                        class="block mb-2 text-[30px] font-medium text-gray-900 dark:text-white">Select
+                        your fasting blood sugar(>120 mg/dl)</label>
+                    <select id="blood sugar" name="blood sugar"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="True">True</option>
+                        <option value="False">False</option>
+                    </select>
+                </div>
+                <div class="mb-7">
+                    <label for="electrocardiographic"
+                        class="block mb-2 text-[30px] font-medium text-gray-900 dark:text-white">Select
+                        your resting electrocardiographic results (0-2) :</label>
+                    <select id="electrocardiographic" name="electrocardiographic"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+
+                <div class="mb-7">
+                    <label for="heart rate"
+                        class="block mb-2 text-[30px] font-medium text-gray-900 dark:text-white">Enter
+                        your Maximum heart rate achieved :</label>
+                    <input type="number" id="heart rate"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Heart rate" required />
+                </div>
+
+                <div class="mb-7">
+                    <label for="angina" class="block mb-2 text-[30px] font-medium text-gray-900 dark:text-white">Select
+                        your exercise induced angina :</label>
+                    <select id="angina" name="angina"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+
+                <div class="mb-7">
+                    <label for="ST" class="block mb-2 text-[30px] font-medium text-gray-900 dark:text-white">Enter
+                        your ST depression induced by exercise relative to rest :</label>
+                    <input type="number" id="ST"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="ST depression" required />
+                </div>
+
+                <div class="mb-7">
+                    <label for="ST segment"
+                        class="block mb-2 text-[30px] font-medium text-gray-900 dark:text-white">Select
+                        your slope of the peak exercise ST segment (0-2):</label>
+                    <select id="ST segment" name="ST segment"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+                <div class="mb-7">
+                    <label for="ST flouroscopy"
+                        class="block mb-2 text-[30px] font-medium text-gray-900 dark:text-white">Select
+                        your number of major vessels (0-3) coloured by flouroscopy :</label>
+                    <select id="ST flouroscopy" name="flouroscopy"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="2">3</option>
+                    </select>
+                </div>
+                <div class="mb-7">
+                    <label for="thal" class="block mb-2 text-[30px] font-medium text-gray-900 dark:text-white">Select
+                        your thal :</label>
+                    <select id="thal" name="thal"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Fixed defect">Fixed defect</option>
+                        <option value="Reversable defect">Reversable defect</option>
+                    </select>
                 </div>
 
 
-                <button type="submit" onclick="predict()"
-                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
+                <button type="submit" onclick="showInput()" id="submitBtn"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-4 rounded focus:outline-none focus:shadow-outline text-[25px]">Submit</button>
             </form>
             <br>
             <!-- <section class="w-[100%] h-[100vh] bg-[url('/img/4.webp')] bg-center bg-cover"> -->
             <div class="w-[100%] h-[100vh] bg-[black]">
-                <div class="w-[100%] bg-black border-t-[8px] border-t-[#605d5d] sm:py-[50px] py-[50px]"></div>
+                <div class="w-[100%] bg-black border-t-[15px] border-t-[#605d5d] sm:py-[50px] py-[50px]"></div>
 
                 <!-- Script section -->
 
-                <div class="mt-1 pl-[65px] text-white text-[20px]" id="display">
-                    
+                <div class="mt-1 pl-[65px] text-white text-[31px]" id="display">
+                    <script src="script.js"></script>
                 </div>
             </div>
             <!-- </section> -->
             <script src="script.js"></script>
 </body>
+
 </html>
