@@ -93,10 +93,18 @@
                     </select>
                 </div>
                 <div class="mb-7">
-                    <label for="electrocardiographic"
+                
+                    <div class="flex gap-4">
+                        <label for="electrocardiographic"
                         class="block mb-2 text-[30px] font-medium text-white">Select
-                        your resting electrocardiographic results (0-2) :</label>
-                    <select id="electrocardiographic" name="electrocardiographic"
+                        your resting electrocardiographic results (0-2) :</label> 
+
+                        <a href="https://www.ncbi.nlm.nih.gov/books/NBK367910/#:~:text=Resting%2012%2Dlead%20electrocardiography%20(ECG,hypertrophy%20and%20bundle%20branch%20blocks."
+                        target="_blank" 
+                        class="inline-block relative mb-2 text-[30px] font-medium text-blue-500 font-semibold hover:text-blue-700 hover:after:absolute hover:after:block hover:after:w-full hover:after:h-0.5 hover:after:bg-blue-500 hover:after:content=''">Know More..!</a>
+                    </div>
+                    
+                        <select id="electrocardiographic" name="electrocardiographic"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         required>
                         <option value="" disabled selected>Select an option</option>
@@ -116,8 +124,17 @@
                 </div>
 
                 <div class="mb-7">
-                    <label for="angina" class="block mb-2 text-[30px] font-medium text-white">Select
-                        your exercise induced angina :</label>
+                    
+                    <div class="flex gap-4">
+                        <label for="angina" class="block mb-2 text-[30px] font-medium text-white">Select
+                            your exercise induced angina :</label>
+                        
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6426112/"
+                            target="_blank"
+                            class="inline-block relative mb-2 text-[30px] font-medium text-blue-500 font-semibold hover:text-blue-700 hover:after:absolute hover:after:block hover:after:w-full hover:after:h-0.5 hover:after:bg-blue-500 hover:after:content=''">Know
+                            More..!</a>
+                    </div>
+
                     <select id="angina" name="angina"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         required>
@@ -128,17 +145,31 @@
                 </div>
 
                 <div class="mb-7">
-                    <label for="ST" class="block mb-2 text-[30px] font-medium text-white">Enter
+                    
+                    <div class="flex gap-2">
+                        <label for="ST" class="block mb-2 text-[30px] font-medium text-white">Enter
                         your ST depression induced by exercise relative to rest :</label>
+
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1768611/" target="_blank" class="inline-block relative mb-2 text-[30px] font-medium text-blue-500 font-semibold hover:text-blue-700 hover:after:absolute hover:after:block hover:after:w-full hover:after:h-0.5 hover:after:bg-blue-500 hover:after:content=''">Know More..!</a>
+                    </div>
+
                     <input type="number" id="ST"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="ST depression" required />
                 </div>
 
                 <div class="mb-7">
-                    <label for="ST segment"
-                        class="block mb-2 text-[30px] font-medium text-white">Select
-                        your slope of the peak exercise ST segment (0-2):</label>
+                    
+                    <div class="flex gap-4">
+                        <label for="ST segment" class="block mb-2 text-[30px] font-medium text-white">Select
+                            your slope of the peak exercise ST segment (0-2):</label>
+                    
+                        <!-- <a href="#"
+                            target="_blank"
+                            class="inline-block relative mb-2 text-[30px] font-medium text-blue-500 font-semibold hover:text-blue-700 hover:after:absolute hover:after:block hover:after:w-full hover:after:h-0.5 hover:after:bg-blue-500 hover:after:content=''">Know
+                            More..!</a> -->
+                    </div>
+
                     <select id="ST segment" name="ST segment"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         required>
@@ -149,9 +180,17 @@
                     </select>
                 </div>
                 <div class="mb-7">
-                    <label for="ST flouroscopy"
-                        class="block mb-2 text-[30px] font-medium text-white">Select
-                        your number of major vessels (0-3) coloured by flouroscopy :</label>
+                    
+                    <div class="flex-cols gap-2">
+                        <label for="ST flouroscopy" class="block mb-2 text-[30px] font-medium text-white">Select
+                            your number of major vessels (0-3) coloured by flouroscopy :</label>
+                        
+                        <!-- <a href="#"
+                            target="_blank"
+                            class="inline-block relative mb-2 text-[30px] font-medium text-blue-500 font-semibold hover:text-blue-700 hover:after:absolute hover:after:block hover:after:w-full hover:after:h-0.5 hover:after:bg-blue-500 hover:after:content=''">Know
+                            More..!</a> -->
+                    </div>
+
                     <select id="ST flouroscopy" name="flouroscopy"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         required>
@@ -163,8 +202,17 @@
                     </select>
                 </div>
                 <div class="mb-7">
-                    <label for="thal" class="block mb-2 text-[30px] font-medium text-white">Select
-                        Your Thalassemia :</label>
+                    
+                    <div class="flex gap-4">
+                        <label for="thal" class="block mb-2 text-[30px] font-medium text-white">Select
+                            Your Thalassemia :</label>
+                        
+                        <!-- <a href="#"
+                            target="_blank"
+                            class="inline-block relative mb-2 text-[30px] font-medium text-blue-500 font-semibold hover:text-blue-700 hover:after:absolute hover:after:block hover:after:w-full hover:after:h-0.5 hover:after:bg-blue-500 hover:after:content=''">Know
+                            More..!</a> -->
+                    </div>
+
                     <select id="thal" name="thal"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         required>
