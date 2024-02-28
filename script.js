@@ -67,6 +67,41 @@ async function predict(){
 }
 
 
+// Show the loader
+document.getElementById('loader').style.display = 'block';
+
+// Fetch data
+(async () => {
+  const data = {
+    // your data
+  };
+
+  console.log(data);
+
+  try {
+    const res = await fetch("http://localhost:8000/predict", {
+      // your fetch options
+    });
+
+    // Hide the loader
+    document.getElementById('loader').style.display = 'none';
+
+    // Rest of your code
+  } catch (error) {
+    // Don't forget to hide the loader in case of error too
+    document.getElementById('loader').style.display = 'none';
+
+    // Handle error
+  }
+})();
+
+
+
+window.addEventListener("load", function () {
+  document.getElementById("loader").style.display = "none";
+});
+
+
 
 // (async () => {
 //   const data = {
