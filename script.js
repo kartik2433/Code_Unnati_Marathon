@@ -6,9 +6,7 @@ async function predict(){
     const restingValue = document.getElementById("resting").value;
     const cholersterolValue = document.getElementById("serum").value;
     const bloodsugarValue = document.getElementById("blood sugar").value;
-    const electrocardiographicValue = document.getElementById(
-      "electrocardiographic"
-    ).value;
+    const electrocardiographicValue = document.getElementById("electrocardiographic").value;
     const heartrateValue = document.getElementById("heart rate").value;
     const anginaValue = document.getElementById("angina").value;
     const STValue = document.getElementById("ST").value;
@@ -51,6 +49,7 @@ async function predict(){
     } catch (error) {
       console.log(error);
     }
+    
     if (!isNaN(prediction)){
       console.log("Server is Not Responding...!");
     }
