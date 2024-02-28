@@ -6,28 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Risk Assessment Model</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
     
 </head>
 
 <body class="">
-
-    <div id="loader" class="loader"></div>
-
-    <section class="w-[auto] h-[149vh] bg-[url('./img/3.jpg')] bg-center bg-cover">
-        <div class="w-[auto] h-[149vh] bg-[rgba(0,0,0,0.8)]">
-
+    <div id="loader" class="loader"></div>;
+    <section class="w-[auto] bg-[url('./img/3.jpg')] bg-cover bg-center bg-no-repeat">
+        <div class="w-[auto] bg-[rgba(0,0,0,0.8)]">
 
             <nav class="mx-auto my-auto flex justify-between items-center p-10 pl-250 text-[20px]">
-                <div>
-                    <a href="#" class="text-white font-bold text-[40px]">Health Risk Assessment Model</a>
-                </div>
-                <div class="flex space-x-8 font-bold text-[35px]">
+                <a href="#" class="text-white font-bold text-[40px] flex justify-between items-center">Health Risk Assessment Model</a>
+                <!-- <div class="flex space-x-8 font-bold text-[35px]">
                     <a href="#" class="text-white">HeartBeat</a>
                     <a href="#" class="text-white">Diabetes</a>
                     <a href="#" class="text-white">Blood Pressure</a>
-                </div>
+                </div> -->
             </nav>
 
             <form class="max-w-5xl mx-auto mt-5 ">
@@ -170,7 +164,7 @@
                 </div>
                 <div class="mb-7">
                     <label for="thal" class="block mb-2 text-[30px] font-medium text-white">Select
-                        your thal :</label>
+                        Your Thalassemia :</label>
                     <select id="thal" name="thal"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         required>
@@ -185,24 +179,16 @@
             <div class="max-w-5xl mx-auto mt-5 ">
                 <button  onclick="predict()" id="submitBtn"
                     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-4 rounded focus:outline-none focus:shadow-outline text-[25px]">Submit</button>
-                <br>
             </div>
-            <!-- <section class=" w-[100%] h-[100vh] bg-[url('/img/4.webp')] bg-center bg-cover"> -->
-            <div class="w-[100%] h-[100vh] bg-[black]">
-                <!-- <div class="w-[100%] bg-black border-t-[15px] border-t-[#605d5d] sm:py-[50px] py-[50px]"></div> -->
-
-                <!-- Script section -->
-
-                <div class="mt-1 pl-[65px] text-white text-[31px]" id="display">
-                    <script src="script.js"></script>
+            <br>
+            <!-- <section class="w-[100%] h-[100vh] bg-[url('/img/4.webp')] bg-center bg-cover"> -->
+            <div class="w-[100%] h-fit bg-[black]">
+                <div class="w-[100%] h-[20px] bg-black border-t-[15px] border-t-[#605d5d]"></div>
+                <div class="pl-[65px] text-white text-[50px]" id="display">
                 </div>
             </div>
             <!-- </section> -->
             <script src="script.js"></script>
-
-            
-
-
 </body>
 
 </html>

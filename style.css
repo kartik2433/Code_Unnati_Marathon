@@ -5,6 +5,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    visibility: hidden;
 
     /* Create the spinner */
     border: 16px solid rgba(255, 255, 255, 0.2); /* Make the "track" of the spinner lighter */
