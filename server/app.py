@@ -6,7 +6,7 @@ import numpy as np
 from request import RequestModel
 
 app = FastAPI()
-pickle_in = open("./model/classifier.pkl", "rb")
+pickle_in = open("./model/heartModel.pkl", "rb")
 classifier = pickle.load(pickle_in)
 
 app.add_middleware(
