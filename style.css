@@ -4,16 +4,19 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1000;
+    z-index: 1;
 
     /* Create the spinner */
-    border: 16px solid #f3f3f3;
+    border: 16px solid rgba(255, 255, 255, 0.2); /* Make the "track" of the spinner lighter */
     border-radius: 50%;
-    border-top: 16px solid #3498db;
+    border-top: 16px solid #ffffff; /* The "progress" of the spinner is white */
     width: 120px;
     height: 120px;
     -webkit-animation: spin 2s linear infinite; /* Safari */
     animation: spin 2s linear infinite;
+
+    /* Add a box shadow for a 3D effect */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Safari */

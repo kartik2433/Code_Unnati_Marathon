@@ -61,45 +61,75 @@ async function predict(){
       result = "No, You don't have a Heart Disease";
     }
 
+
+    
+
+
     document.getElementById(
       "display"
     ).innerHTML = `Prediction : ${result} <br> Name : ${nameValue} <br> Age : ${ageValue} <br> Gender : ${selectedGender} <br> Chest Value : ${chestValue} <br> Resting Blood Pressure : ${restingValue} <br> Serum Cholestrol Value : ${cholersterolValue} <br> Fasting blood sugar : ${bloodsugarValue} <br> Resting Electrocardiographic : ${electrocardiographicValue} <br> Maximum Heart Rate : ${heartrateValue} <br> Angina Exercise : ${anginaValue} <br> ST depression : ${STValue} <br> ST Segment : ${STsegmentValue} <br>  Flouroscopy Value : ${STflouroscopyValue} <br> Thal Value : ${thalValue} <br>`;
-}
 
 
-// Show the loader
+    // Show the loader
 document.getElementById('loader').style.display = 'block';
 
-// Fetch data
-(async () => {
-  const data = {
-    // your data
-  };
+fetch('your-api-url')
+    .then(response => response.json())
+    .then(data => {
+        // Process your data here
 
-  console.log(data);
+        // Then hide the loader
+        document.getElementById('loader').style.display = 'none';
+    })
+    .catch(error => {
+        console.error('Error:', error);
 
-  try {
-    const res = await fetch("http://localhost:8000/predict", {
-      // your fetch options
+        // Don't forget to hide the loader in case of error too
+        document.getElementById('loader').style.display = 'none';
     });
 
-    // Hide the loader
-    document.getElementById('loader').style.display = 'none';
-
-    // Rest of your code
-  } catch (error) {
-    // Don't forget to hide the loader in case of error too
-    document.getElementById('loader').style.display = 'none';
-
-    // Handle error
   }
-})();
+  
+  
+
+  
+  
+  
+
+  
+//   // Fetch data
+//   (async () => {
+//     const data = {
+//       // your data
+//     };
+    
+//     console.log(data);
+//     try {
+//       const res = await fetch("http://localhost:8000/predict", {
+//         // your fetch options
+    
+//       });
+
+
+//       $(window).on("load", function() {
+//           $(".loader").fadeOut("slow");
+//       });
+
+//   } catch (error) {
+//     // Don't forget to hide the loader in case of error too
+//     document.getElementById('loader').style.display = 'Loading...!!';
+
+//     // Handle error
+//   }
+// })();
 
 
 
-window.addEventListener("load", function () {
-  document.getElementById("loader").style.display = "none";
-});
+
+
+
+// loader on page 
+
 
 
 
