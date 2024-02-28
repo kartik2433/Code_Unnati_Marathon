@@ -9,7 +9,7 @@
 </head>
 
 <body class="">
-    <section class="w-[auto] h-[149vh] bg-[url('/img/3.jpg')] bg-center bg-cover">
+    <section class="w-[auto] h-[149vh] bg-[url('./img/3.jpg')] bg-center bg-cover">
         <div class="w-[auto] h-[149vh] bg-[rgba(0,0,0,0.8)]">
 
 
@@ -88,8 +88,8 @@
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         required>
                         <option value="" disabled selected>Select an option</option>
-                        <option value="True">True</option>
-                        <option value="False">False</option>
+                        <option value="1">True</option>
+                        <option value="0">False</option>
                     </select>
                 </div>
                 <div class="mb-7">
@@ -122,8 +122,8 @@
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         required>
                         <option value="" disabled selected>Select an option</option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
                     </select>
                 </div>
 
@@ -169,14 +169,14 @@
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         required>
                         <option value="" disabled selected>Select an option</option>
-                        <option value="Normal">Normal</option>
-                        <option value="Fixed defect">Fixed defect</option>
-                        <option value="Reversable defect">Reversable defect</option>
+                        <option value="0">Normal</option>
+                        <option value="1">Fixed defect</option>
+                        <option value="2">Reversable defect</option>
                     </select>
                 </div>
 
 
-                <button type="submit" onclick="showInput()" id="submitBtn"
+                <button onclick="predict()" id="submitBtn"
                     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-4 rounded focus:outline-none focus:shadow-outline text-[25px]">Submit</button>
             </form>
             <br>
@@ -191,7 +191,7 @@
                 </div>
             </div>
             <!-- </section> -->
-            <script src="script.js"></script>
+            <script src="./script.js"></script>
 </body>
 
 </html>
