@@ -38,7 +38,7 @@ async function predict(){
     document.getElementById('loader').style.visibility = 'visible';
 
     try {
-      const res = await fetch("http://localhost:8000/predict", {
+      const res = await fetch("https://code-unnati-marathon.onrender.com/predict", {
         method: "POST",
         headers: {
           Accept: "application/json",
