@@ -67,7 +67,7 @@ async function predict(){
 
     document.getElementById(
       "display"
-    ).innerHTML = `${nameValue} ${result}`;
+    ).innerHTML = `${result}`;
   }
   
   

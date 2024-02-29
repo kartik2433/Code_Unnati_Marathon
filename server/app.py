@@ -5,7 +5,6 @@ import pandas as pd
 import numpy as np
 from request import RequestModel 
 from fastapi.staticfiles import StaticFiles
-from bottle import static_file
 from fastapi.responses import RedirectResponse
 
 app = FastAPI()
