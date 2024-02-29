@@ -3,9 +3,13 @@ from fastapi.middleware.cors import CORSMiddleware
 import pickle
 import pandas as pd
 import numpy as np
-from request import RequestModel
+from request import RequestModel 
+from fastapi.staticfiles import StaticFiles
+from bottle import static_file
+from fastapi.responses import RedirectResponse
 
 app = FastAPI()
+app.mount("/static", StaticFiles(directory="../", html=True), name="static")
 pickle_in = open("./model/heartModel.pkl", "rb")
 classifier = pickle.load(pickle_in)
 
@@ -19,7 +23,7 @@ app.add_middleware(
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return RedirectResponse(url='/static/index.html')
 
 @app.get('/{name}')
 def hello(name: str):
