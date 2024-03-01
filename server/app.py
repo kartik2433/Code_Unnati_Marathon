@@ -28,6 +28,9 @@ X_test = scaler.transform(X_test)
 # Training the model
 model = RandomForestClassifier(random_state=42)
 model.fit(X_train, y_train)
+values = np.array([58,0,0,100,248,0,0,122,0,1,1,0,2])
+prediction = model.predict([values])
+print(prediction)
 
 app = FastAPI()
 pickle_in = open("./model/heartModel.pkl", "rb")
