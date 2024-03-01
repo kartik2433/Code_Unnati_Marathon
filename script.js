@@ -1,35 +1,20 @@
 async function predict(){
-    const nameValue = document.getElementById("name").value;
-    const ageValue = document.getElementById("age").value;
-    const selectedGender = document.getElementById("gender").value;
     const chestValue = document.getElementById("chest").value;
     const restingValue = document.getElementById("resting").value;
     const cholersterolValue = document.getElementById("serum").value;
     const bloodsugarValue = document.getElementById("blood sugar").value;
     const electrocardiographicValue = document.getElementById("electrocardiographic").value;
     const heartrateValue = document.getElementById("heart rate").value;
-    const anginaValue = document.getElementById("angina").value;
-    const STValue = document.getElementById("ST").value;
     const STsegmentValue = document.getElementById("ST segment").value;
-    const STflouroscopyValue = document.getElementById("ST flouroscopy").value;
-    const thalValue = document.getElementById("thal").value;
-
-    GEN = selectedGender === "male" ? 1 : 0;
 
     const data = {
-      age: parseInt(ageValue),
-      gender: parseInt(GEN),
-      chest_pain: parseInt(chestValue),
-      resting_blood_pressure: parseInt(restingValue),
-      cholesterol: parseInt(cholersterolValue),
-      sugar: parseInt(bloodsugarValue),
-      electrocardiographic_result: parseInt(electrocardiographicValue),
-      max_heart_rate: parseInt(heartrateValue),
-      exercise_induced_angina: parseInt(anginaValue),
-      ST_depression: parseInt(STValue),
-      slope: parseInt(STsegmentValue),
-      major_vessels: parseInt(STflouroscopyValue),
-      thalassemia: parseInt(thalValue),
+      chest_pain: chestValue,
+      resting_blood_pressure: restingValue,
+      cholesterol: cholersterolValue,
+      sugar: bloodsugarValue,
+      electrocardiographic_result: electrocardiographicValue,
+      max_heart_rate: heartrateValue,
+      slope: STsegmentValue,
     };
     console.log(data)
 

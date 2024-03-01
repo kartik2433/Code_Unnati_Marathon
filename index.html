@@ -11,7 +11,7 @@
 </head>
 
 <body class="">
-    <div id="loader" class="loader"></div>;
+    <div id="loader" class="loader"></div>
     <section class="w-[auto] bg-[url('./img/3.jpg')] bg-cover bg-center bg-no-repeat">
         <div class="w-[auto] bg-[rgba(0,0,0,0.8)]">
 
@@ -25,32 +25,6 @@
             </nav>
 
             <form class="max-w-5xl mx-auto mt-5 ">
-                <div class="mb-7">
-                    <label for="name" class="block mb-2 text-[30px] font-medium text-white">Enter
-                        your Name</label>
-                    <input type="text" id="name"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Name" required />
-                </div>
-                <div class="mb-7">
-                    <label for="age" class="block mb-2 text-[30px] font-medium text-white">Enter your
-                        Age</label>
-                    <input type="number" id="age"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Age" required />
-                </div>
-                <div class="mb-7">
-                    <label for="gender" class="block mb-2 text-[30px] font-medium text-white">Select
-                        your Gender</label>
-                    <select id="gender" name="gender"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        required>
-                        <option value="" disabled selected>Select an option</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
                 <div class="mb-7">
                     <label for="chest" class="block mb-2 text-[30px] font-medium text-white">Select
                         your Chest pain type (0-3) :</label>
@@ -126,45 +100,6 @@
                 <div class="mb-7">
                     
                     <div class="flex gap-4">
-                        <label for="angina" class="block mb-2 text-[30px] font-medium text-white">Select
-                            your exercise induced angina :</label>
-                        
-                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6426112/"
-                            target="_blank"
-                            class="inline-block relative mb-2 text-[30px] font-medium text-blue-500 font-semibold hover:text-blue-700 hover:after:absolute hover:after:block hover:after:w-full hover:after:h-0.5 hover:after:bg-blue-500 hover:after:content=''">Know
-                            More..!</a>
-                    </div>
-
-                    <select id="angina" name="angina"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        required>
-                        <option value="" disabled selected>Select an option</option>
-                        <option value="1">Yes</option>
-                        <option value="0">No</option>
-                    </select>
-                </div>
-
-                <div class="mb-7">
-                    
-                    <div class="flex gap-2">
-                        <label for="ST" class="block mb-2 text-[30px] font-medium text-white">
-                        Chest Pain or Discomfort During Exercise :</label>
-
-                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1768611/" target="_blank" class="inline-block relative mb-2 text-[30px] font-medium text-blue-500 font-semibold hover:text-blue-700 hover:after:absolute hover:after:block hover:after:w-full hover:after:h-0.5 hover:after:bg-blue-500 hover:after:content=''">Know More..!</a>
-                    </div>
-
-                    <select id="ST" name="ST"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        required>
-                        <option value="" disabled selected>Select an option</option>
-                        <option value="1">Yes</option>
-                        <option value="0">No</option>
-                    </select>
-                </div>
-
-                <div class="mb-7">
-                    
-                    <div class="flex gap-4">
                         <label for="ST segment" class="block mb-2 text-[30px] font-medium text-white">Select
                             your slope of the peak exercise ST segment (0-2):</label>
                     
@@ -181,50 +116,6 @@
                         <option value="0">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
-                    </select>
-                </div>
-                <div class="mb-7">
-                    
-                    <div class="flex-cols gap-2">
-                        <label for="ST flouroscopy" class="block mb-2 text-[30px] font-medium text-white">Select
-                            your number of major vessels (0-3) coloured by flouroscopy :</label>
-                        
-                        <!-- <a href="#"
-                            target="_blank"
-                            class="inline-block relative mb-2 text-[30px] font-medium text-blue-500 font-semibold hover:text-blue-700 hover:after:absolute hover:after:block hover:after:w-full hover:after:h-0.5 hover:after:bg-blue-500 hover:after:content=''">Know
-                            More..!</a> -->
-                    </div>
-
-                    <select id="ST flouroscopy" name="flouroscopy"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        required>
-                        <option value="" disabled selected>Select an option</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="2">3</option>
-                    </select>
-                </div>
-                <div class="mb-7">
-                    
-                    <div class="flex gap-4">
-                        <label for="thal" class="block mb-2 text-[30px] font-medium text-white">Select
-                            Your Thalassemia (0-3):</label>
-                        
-                        <!-- <a href="#"
-                            target="_blank"
-                            class="inline-block relative mb-2 text-[30px] font-medium text-blue-500 font-semibold hover:text-blue-700 hover:after:absolute hover:after:block hover:after:w-full hover:after:h-0.5 hover:after:bg-blue-500 hover:after:content=''">Know
-                            More..!</a> -->
-                    </div>
-
-                    <select id="thal" name="thal"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        required>
-                        <option value="" disabled selected>Select an option</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
                     </select>
                 </div>
             </form>
