@@ -23,7 +23,7 @@ async function predict(){
     document.getElementById('loader').style.visibility = 'visible';
 
     try {
-      const res = await fetch("https://code-unnati-marathon.onrender.com/predict", {
+      const res = await fetch("http://localhost:8000/predict", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -32,7 +32,7 @@ async function predict(){
         body: JSON.stringify(data),
       });
       prediction = await res.json();
-      console.log(prediction);
+      console.log(prediction['Prediction']);
     } catch (error) {
       console.log(error);
     }
@@ -41,7 +41,8 @@ async function predict(){
       console.log("Server is Not Responding...!");
     }
     let result ;
-    if(prediction === 1){
+
+    if(prediction['Prediction'] == 1){
       result = "You have a Heart Disease";
     }
     else{
